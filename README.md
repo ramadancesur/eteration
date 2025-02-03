@@ -1,8 +1,10 @@
-# Eteration Academy Selenium Tests
+# Eteration Academy Test Projects
 
-Bu proje, Eteration Academy web sitesi için Selenium test otomasyonlarını içerir.
+Bu repository, Eteration Academy için test projelerini içerir.
 
-## Test Senaryoları
+## 1. Selenium Test Otomasyonu
+
+### Test Senaryoları
 
 1. **Eğitmen Listesi Testi**: 
    - Eğitmenler sayfasına gider
@@ -15,7 +17,7 @@ Bu proje, Eteration Academy web sitesi için Selenium test otomasyonlarını iç
    - Test email adresi girer
    - Formu gönderir
 
-## Kurulum
+### Kurulum
 
 1. Gerekli Python paketlerini yükleyin:
 ```bash
@@ -24,15 +26,19 @@ pip install -r requirements.txt
 
 2. Chrome WebDriver'ın yüklü olduğundan emin olun (webdriver-manager otomatik olarak yükleyecektir)
 
-## Testleri Çalıştırma
+### Testleri Çalıştırma
 
 Tüm testleri çalıştırmak için:
 ```bash
 python test_eteration_academy.py
 ```
 
-## Gereksinimler
+### Gereksinimler
 
 - Python 3.x
 - Selenium WebDriver
 - Chrome Tarayıcı
+
+## 2. Manuel Test Senaryoları
+
+Detaylı manuel test senaryoları için `Google_Test_Cases.xlsx` dosyasına bakınız.
