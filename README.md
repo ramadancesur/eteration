@@ -1,44 +1,79 @@
-# Eteration Academy Test Projects
+# 📌 Test Automation Project
 
-Bu repository, Eteration Academy için test projelerini içerir.
+## 📖 Overview
 
-## 1. Selenium Test Otomasyonu
+This repository contains test automation implementations for multiple tasks, including UI Testing, API Testing (REST & SOAP), and Test Case Preparation. The tasks cover functional and non-functional testing, automated UI tests using Selenium, API testing using Postman and SoapUI, and database structure illustrations.
 
-### Test Senaryoları
+## 🏆 Tasks Completed
 
-1. **Eğitmen Listesi Testi**: 
-   - Eğitmenler sayfasına gider
-   - Eğitmen listesinin boş olmadığını kontrol eder
-   - Bulunan eğitmen sayısını raporlar
+### **✅ Task 1: Testcase Preparation**
 
-2. **Newsletter Abonelik Testi**:
-   - Ana sayfaya gider
-   - Newsletter bölümünü bulur
-   - Test email adresi girer
-   - Formu gönderir
+- **Functional Test Scenario:**
+  - Google account signup process.
+  - Detailed test steps defined.
+- **Non-Functional Test Scenarios:**
+  - Performance Testing
+  - Security Testing
+  - Usability Testing
 
-### Kurulum
+### **✅ Task 2: HTTP REST Service Test**
 
-1. Gerekli Python paketlerini yükleyin:
+- Created **Postman Collection** covering all HTTP methods for `/post` endpoint at `https://jsonplaceholder.typicode.com`.
+- Illustrated **database table structures** for `post`, `comment`, and `user` (ERD diagram).
+- **Bonus:** Created **Postman Collection Runner** with a dataset for bulk testing.
+
+### **✅ Task 3: HTTP SOAP Service Test**
+
+- Created a **SoapUI project** for `https://www.crcind.com/csp/samples/SOAP.Demo.cls`.
+- Covered all operations (requests + responses).
+- **Bonus:** Added **Test Suite with Load Testing** in SoapUI for a single operation.
+
+### **✅ Task 4: UI Testing with Selenium**
+
+- Developed a **Selenium WebDriver test script** to:
+  - Open `https://academy.eteration.com/`.
+  - Click on **Instructors** page (`https://academy.eteration.com/instructors`).
+  - Verify that the instructor list is **not empty** and has exactly **8 instructors**.
+- **Bonus:** Used **Selenium IDE** to record and automate the "SUBSCRIBE TO NEWSLETTER" scenario.
+
+## 🚀 Setup & Execution
+
+### **🔹 Prerequisites**
+
+Ensure the following tools are installed:
+
+- **Postman** (for REST API testing) - [Download](https://www.postman.com/downloads/)
+- **SoapUI** (for SOAP API testing) - [Download](https://www.soapui.org/downloads/)
+- **Selenium WebDriver** with:
+  - Python/Java (based on implementation)
+  - ChromeDriver (ensure it's in the system path)
+  - `pip install selenium` (for Python users)
+
+### **🔹 Running Tests**
+
+#### 1️⃣ **Selenium UI Tests**
+
 ```bash
-pip install -r requirements.txt
+python test_eteration_academy.py  # Run Selenium WebDriver tests
 ```
 
-2. Chrome WebDriver'ın yüklü olduğundan emin olun (webdriver-manager otomatik olarak yükleyecektir)
+#### 2️⃣ **Postman API Tests**
 
-### Testleri Çalıştırma
+- Open Postman and import the provided collection.
+- Click **Run Collection** to execute tests.
 
-Tüm testleri çalıştırmak için:
-```bash
-python test_eteration_academy.py
-```
+#### 3️⃣ **SoapUI Tests**
 
-### Gereksinimler
+- Open SoapUI.
+- Load the provided project.
+- Run test cases under the Test Suite.
 
-- Python 3.x
-- Selenium WebDriver
-- Chrome Tarayıcı
+## 📜 License
 
-## 2. Manuel Test Senaryoları
+This project is open-source and free to use.
 
-Detaylı manuel test senaryoları için `Google_Test_Cases.xlsx` dosyasına bakınız.
+## 👨‍💻 Author
+
+**Ramadan Cesur**
+
+---
