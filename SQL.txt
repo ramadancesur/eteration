@@ -1,0 +1,34 @@
+-- Users table (10 users as per JSONPlaceholder docs)
+CREATE TABLE users (
+    id INT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    username VARCHAR(50) NOT NULL UNIQUE,
+    email VARCHAR(100) NOT NULL UNIQUE,
+    address JSON,  -- Stores nested address data
+    phone VARCHAR(50),
+    website VARCHAR(100),
+    company JSON   -- Stores nested company data
+);
+
+-- Posts table (100 posts as per JSONPlaceholder docs)
+CREATE TABLE posts (
+    id INT PRIMARY KEY,
+    userId INT NOT NULL,
+    title VARCHAR(200) NOT NULL,
+    body TEXT NOT NULL,
+    FOREIGN KEY (userId) REFERENCES users(id)
+);
+
+-- Comments table (500 comments as per JSONPlaceholder docs)
+CREATE TABLE comments (
+    id INT PRIMARY KEY,
+    postId INT NOT NULL,
+    name VARCHAR(100) NOT NULL,
+    email VARCHAR(100) NOT NULL,
+    body TEXT NOT NULL,
+    FOREIGN KEY (postId) REFERENCES posts(id)
+);
+
+-- Indexes
+CREATE INDEX idx_posts_userId ON posts(userId);
+CREATE INDEX idx_comments_postId ON comments(postId);
